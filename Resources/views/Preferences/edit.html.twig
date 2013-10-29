@@ -1,0 +1,23 @@
+{% extends "ApplicationSonataUserBundle:Profile:action.html.twig" %}
+
+{% block sonata_profile_title %}
+    {{ "title_user_account" | trans({}, 'SonataUserBundle')}} - {{ "title_user_change_preferences" | trans({}, 'SonataUserBundle')}}
+{% endblock %}
+
+{% block sonata_profile_content %}
+	 {{ form_errors(form) }}
+
+    {% form_theme form _self %}
+
+    <form action="{{ path('nvision_holiday_user_preferences_edit') }}" method="POST" class="form-horizontal" role="form">
+        
+{#         <div class="form-group">#}
+{#             {{ form_errors(form.phone) }}#}
+{#             {{ form_label(form.phone, 'label_profile_phone', {'label_attr': {'class': 'col-lg-3 control-label'}}) }}#}
+{#             <div class="col-lg-9">{{ form_widget(form.phone, {'attr' : {'class': 'form-control'}}) }}</div>#}
+{#         </div>#}
+        
+        {{ form_rest(form) }}
+        <input type="submit" name="submit"  class="btn btn-primary col-md-offset-3" value="{{ 'sonata_user_submit_edit_profile'|trans({}, 'SonataUserBundle') }}" />
+    </form>
+{% endblock sonata_profile_content %}

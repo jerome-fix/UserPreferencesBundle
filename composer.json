@@ -1,0 +1,33 @@
+{
+	"name" : "jfx/user-preferences",
+	"description" : "User Preferences Management.",
+	"type" : "symfony-bundle",
+	"authors" : [{
+			"name" : "FIX Jérôme",
+			"email" : "jerome.fix@zapoyok.info"
+		}
+	],
+	"keywords" : [
+		"user, preference"
+	],
+	"license" : [
+		"MIT"
+	],
+	"require" : {
+		"php" : ">=5.4.0"
+	},
+	"autoload" : {
+		"psr-0" : {
+			"Jfx\\UserPreferencesBundle" : ""
+		}
+	},
+	"target-dir" : "Jfx/UserPreferencesBundle",
+	"config" : {
+		"bin-dir" : "bin/"
+	},
+	"extra" : {
+		"branch-alias" : {
+			"dev-master" : "1.0-dev"
+		}
+	}
+}
