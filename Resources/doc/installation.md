@@ -1,3 +1,9 @@
+Ajouter : 
+
+jfx_user_preferences:
+    resource: "@JfxUserPreferencesBundle//Resources/config/routing/preferences.xml"
+
+au routing
 
 User.orm.xml
 
@@ -49,3 +55,26 @@ jfx_user_preferences:
       attributes:
         label: user_preferences.form.notifications_by_email.label
         required: false    
+        
+Créer un Bundle propre :  XYZUserPreferencesBundle.
+
+<?php
+
+namespace XYZ\Bundle\UserPreferencesBundle;
+
+use Symfony\Component\HttpKernel\Bundle\Bundle;
+
+class XYZUserPreferencesBundle extends Bundle
+{
+    public function getParent()
+    {
+        return 'JfxUserPreferencesBundle';
+    }
+}
+
+Personnaliser le form en copiant et adaptant la vue par exemple.
+
+http://symfony.com/doc/current/cookbook/bundles/inheritance.html
+
+
+
