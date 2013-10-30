@@ -27,11 +27,11 @@ class PreferencesType extends AbstractType
     {
         
         $entityManager = $options['em'];
-        $modelTransformer = new EntityTransformer($entityManager);
         
         foreach ( $this->preferences as $key => $type) {
             switch ( $type['type'] ) {
             	case 'entity' :
+            	    $modelTransformer = new EntityTransformer($entityManager, $type['attributes']['class']);
             	    $builder->add(
             	        $builder->create($key, $type['type'], $type['attributes'])
             	        ->addModelTransformer($modelTransformer)

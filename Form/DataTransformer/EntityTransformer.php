@@ -13,13 +13,15 @@ class EntityTransformer implements DataTransformerInterface
      * @var ObjectManager
      */
     private $om;
+    private $entityName;
 
     /**
      * @param ObjectManager $om
      */
-    public function __construct(ObjectManager $om)
+    public function __construct(ObjectManager $om, $entityName)
     {
         $this->om = $om;
+        $this->entityName = $entityName;
     }
 
     /**
@@ -35,7 +37,7 @@ class EntityTransformer implements DataTransformerInterface
         }
         
         $object = $this->om
-                        ->getRepository('Jfx\HolidayBundle\Entity\Area')
+                        ->getRepository($this->entityName)
                         ->findBy(array('id' => $ids));
 
         return new \Doctrine\Common\Collections\ArrayCollection($object);
