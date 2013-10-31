@@ -18,6 +18,7 @@
         
         <service id="jfx_user_preferences.preference_manager" class="%jfx_user_preferences.preference_manager.class%">
            <argument type="service" id="doctrine.orm.entity_manager" />
+           <argument>%jfx_user_preferences.preferences%</argument>
         </service>
         
     </services>

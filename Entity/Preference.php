@@ -12,6 +12,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  *
  * @ORM\Table(name="jfx__user__preferences")
  * @ORM\Entity
+ * @ORM\Entity(repositoryClass="Jfx\UserPreferencesBundle\Entity\PreferenceRepository")
  */
 class Preference implements PreferenceInterface
 {
