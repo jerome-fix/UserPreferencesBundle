@@ -55,6 +55,14 @@ class PreferencesType extends AbstractType
         return 'jfx_user_preferences_preferences_form';
     }
     
+//    public function setDefaultOptions(OptionsResolverInterface $resolver)
+//    {
+//        $resolver->setDefaults(array(
+//            'data_class' => 'Jfx\UserPreferencesBundle\Entity\Preference,'
+//        ));
+//    }
+
+    
     /**
      * (non-PHPdoc)
      * @see \Symfony\Component\Form\AbstractType::setDefaultOptions()

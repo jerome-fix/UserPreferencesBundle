@@ -32,10 +32,16 @@ class PreferencesController extends ContainerAware
         
         $em = $this->container->get('doctrine')->getManager();
         
+        if (!$request->isMethod('POST'))  {
+            $defaultData = $preference->getData();
+        } else {
+            $defaultData = null;
+        }
         $form =  $this->container
                     ->get('form.factory')
-                    ->create("jfx_user_preferences_preferences_form", $preference->getData(), array('em' => $em));
+                    ->create("jfx_user_preferences_preferences_form", $defaultData, array('em' => $em));
 
+//            var_dump($request); exit();
         $form->handleRequest($request);
         
         if ($form->isValid()) {
