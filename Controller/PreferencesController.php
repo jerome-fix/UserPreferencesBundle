@@ -34,8 +34,9 @@ class PreferencesController extends ContainerAware
         
         $form =  $this->container
                     ->get('form.factory')
-                    ->create("jfx_user_preferences_preferences_form", $preference->getData(), array('em' => $em));
+                    ->create("jfx_user_preferences_preferences_form", null, array('em' => $em));
 
+//            var_dump($request); exit();
         $form->handleRequest($request);
         
         if ($form->isValid()) {

@@ -9,6 +9,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 
 class EntityTransformer implements DataTransformerInterface
 {
+
     /**
      * @var ObjectManager
      */
@@ -35,11 +36,14 @@ class EntityTransformer implements DataTransformerInterface
         if (!$ids) {
             return null;
         }
-        
-        $object = $this->om
-                        ->getRepository($this->entityName)
-                        ->findBy(array('id' => $ids));
 
+        $object = $this->om
+                ->getRepository($this->entityName)
+                ->findBy(array('id' => $ids));
+
+        if (0 === count($object)) {
+            return null;
+        }
         return new \Doctrine\Common\Collections\ArrayCollection($object);
     }
 
@@ -57,11 +61,10 @@ class EntityTransformer implements DataTransformerInterface
         if (null === $object) {
             return $ret;
         }
-         foreach ($object as $item ) {
-             $ret[] = $item->getId();
-         } 
-
+        foreach ($object as $item) {
+            $ret[] = $item->getId();
+        }
         return $ret;
-        
     }
+
 }
