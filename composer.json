@@ -18,10 +18,10 @@
 	},
 	"autoload" : {
 		"psr-0" : {
-			"Jfx\\UserPreferencesBundle" : ""
+			"Zapoyok\\UserPreferencesBundle" : ""
 		}
 	},
-	"target-dir" : "Jfx/UserPreferencesBundle",
+	"target-dir" : "Zapoyok/UserPreferencesBundle",
 	"config" : {
 		"bin-dir" : "bin/"
 	},
