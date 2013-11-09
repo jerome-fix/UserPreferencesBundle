@@ -1,5 +1,5 @@
 {
-	"name" : "jfx/user-preferences-bundle",
+	"name" : "zapoyok/user-preferences-bundle",
 	"description" : "User Preferences Management.",
 	"type" : "symfony-bundle",
 	"authors" : [{
