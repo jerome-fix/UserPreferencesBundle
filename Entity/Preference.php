@@ -10,7 +10,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * Preference
  *
- * @ORM\Table(name="jfx__user__preferences")
+ * @ORM\Table(name="zapoyok__user__preferences")
  * @ORM\Entity(repositoryClass="Zapoyok\UserPreferencesBundle\Entity\PreferenceRepository")
  */
 class Preference implements PreferenceInterface
@@ -27,7 +27,7 @@ class Preference implements PreferenceInterface
     /**
      * @ORM\OneToOne(targetEntity="\Application\Sonata\UserBundle\Entity\User", inversedBy="preferences")
      * @ORM\JoinColumn(name="user_id", referencedColumnName="id", nullable=false)
-     * @Assert\NotNull(message = "jfx_user_preferences.user.not_null")
+     * @Assert\NotNull(message = "zapoyok_user_preferences.user.not_null")
      */
     private $user;
         

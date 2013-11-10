@@ -39,7 +39,7 @@ class PreferencesController extends ContainerAware
         }
         $form =  $this->container
                     ->get('form.factory')
-                    ->create("jfx_user_preferences_preferences_form", $defaultData, array('em' => $em));
+                    ->create("zapoyok_user_preferences_preferences_form", $defaultData, array('em' => $em));
 
 //            var_dump($request); exit();
         $form->handleRequest($request);
@@ -70,6 +70,6 @@ class PreferencesController extends ContainerAware
      */
     public function getPreferenceManager() 
     {
-        return $this->container->get('jfx_user_preferences.preference_manager');
+        return $this->container->get('zapoyok_user_preferences.preference_manager');
     }
 }

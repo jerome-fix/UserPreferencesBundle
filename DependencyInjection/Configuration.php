@@ -18,7 +18,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('jfx_user_preferences');
+        $rootNode = $treeBuilder->root('zapoyok_user_preferences');
         $rootNode
 
             ->validate()

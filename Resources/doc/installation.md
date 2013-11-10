@@ -1,6 +1,6 @@
 Ajouter : 
 
-jfx_user_preferences:
+zapoyok_user_preferences:
     resource: "@ZapoyokUserPreferencesBundle//Resources/config/routing/preferences.xml"
 
 au routing
@@ -42,7 +42,7 @@ User.php
     
     
     
-jfx_user_preferences:
+zapoyok_user_preferences:
   preferences:
     holidays:
       type: entity

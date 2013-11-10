@@ -52,7 +52,7 @@ class PreferencesType extends AbstractType
      */
     public function getName()
     {
-        return 'jfx_user_preferences_preferences_form';
+        return 'zapoyok_user_preferences_preferences_form';
     }
     
 //    public function setDefaultOptions(OptionsResolverInterface $resolver)
