@@ -1,10 +1,10 @@
 <?php
 
-namespace Jfx\UserPreferencesBundle\Entity;
+namespace Zapoyok\UserPreferencesBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
-use Jfx\UserPreferencesBundle\Model\PreferenceInterface;
+use Zapoyok\UserPreferencesBundle\Model\PreferenceInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**

@@ -1,6 +1,6 @@
 <?php
 
-namespace Jfx\UserPreferencesBundle\Form\DataTransformer;
+namespace Zapoyok\UserPreferencesBundle\Form\DataTransformer;
 
 use Symfony\Component\Form\DataTransformerInterface;
 use Symfony\Component\Form\Exception\TransformationFailedException;

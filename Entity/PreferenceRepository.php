@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file is part of the Nvision Holiday project.
+ * This file is part of the Zapoyok Holiday project.
  *
  * (c) Jérôme FIX <jerome.fix@zapoyok.info>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Jfx\UserPreferencesBundle\Entity;
+namespace Zapoyok\UserPreferencesBundle\Entity;
 
 use Doctrine\ORM\EntityRepository;
 

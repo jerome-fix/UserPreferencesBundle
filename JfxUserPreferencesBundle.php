@@ -1,9 +1,9 @@
 <?php
 
-namespace Jfx\UserPreferencesBundle;
+namespace Zapoyok\UserPreferencesBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class JfxUserPreferencesBundle extends Bundle
+class ZapoyokUserPreferencesBundle extends Bundle
 {
 }

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file is part of the Nvision Holiday project.
+ * This file is part of the Zapoyok Holiday project.
  *
  * (c) Jérôme FIX <jerome.fix@zapoyok.info>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Jfx\UserPreferencesBundle\Model;
+namespace Zapoyok\UserPreferencesBundle\Model;
 
 use Doctrine\ORM\EntityManager;
 use Symfony\Component\Security\Core\User\AdvancedUserInterface;
@@ -58,16 +58,16 @@ class PreferenceManager
 
     /**
      * 
-     * @return \Jfx\UserPreferencesBundle\Entity\Preference
+     * @return \Zapoyok\UserPreferencesBundle\Entity\Preference
      */
     public function createPreference()
     {
-        return new \Jfx\UserPreferencesBundle\Entity\Preference();
+        return new \Zapoyok\UserPreferencesBundle\Entity\Preference();
     }
 
     public function getRepository()
     {
-        return $this->em->getRepository('JfxUserPreferencesBundle:Preference');
+        return $this->em->getRepository('ZapoyokUserPreferencesBundle:Preference');
     }
 
     public function findBy(array $criteria, array $orderBy = null)

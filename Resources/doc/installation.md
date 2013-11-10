@@ -1,18 +1,18 @@
 Ajouter : 
 
 jfx_user_preferences:
-    resource: "@JfxUserPreferencesBundle//Resources/config/routing/preferences.xml"
+    resource: "@ZapoyokUserPreferencesBundle//Resources/config/routing/preferences.xml"
 
 au routing
 
 User.orm.xml
 
-<one-to-one field="preferences" target-entity="Jfx\UserPreferencesBundle\Entity\Preference" mapped-by="user" />
+<one-to-one field="preferences" target-entity="Zapoyok\UserPreferencesBundle\Entity\Preference" mapped-by="user" />
 
 User.php
 
 	/**
-     * @var \Jfx\UserPreferencesBundle\Entity\Preference
+     * @var \Zapoyok\UserPreferencesBundle\Entity\Preference
      */
     protected $preferences;
     
@@ -22,7 +22,7 @@ User.php
     /**
      * Get preferences
      *
-     * @return \Jfx\UserPreferencesBundle\Entity\Preference
+     * @return \Zapoyok\UserPreferencesBundle\Entity\Preference
      */
     public function getPreferences()
     {
@@ -31,10 +31,10 @@ User.php
 
     /**
      * 
-     * @param \Jfx\UserPreferencesBundle\Model\PreferenceInterface $preferences
+     * @param \Zapoyok\UserPreferencesBundle\Model\PreferenceInterface $preferences
      * @return \Application\Sonata\UserBundle\Entity\User
      */
-    public function setPreferences(\Jfx\UserPreferencesBundle\Model\PreferenceInterface $preferences)
+    public function setPreferences(\Zapoyok\UserPreferencesBundle\Model\PreferenceInterface $preferences)
     {
         $this->preferences = $preferences;
         return $this;
@@ -47,7 +47,7 @@ jfx_user_preferences:
     holidays:
       type: entity
       attributes:
-        class: Jfx\HolidayBundle\Entity\Area
+        class: Zapoyok\HolidayBundle\Entity\Area
         multiple: true
         required: false
     notifications_by_email:
@@ -68,7 +68,7 @@ class XYZUserPreferencesBundle extends Bundle
 {
     public function getParent()
     {
-        return 'JfxUserPreferencesBundle';
+        return 'ZapoyokUserPreferencesBundle';
     }
 }
 

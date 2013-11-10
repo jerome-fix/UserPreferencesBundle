@@ -9,7 +9,7 @@
 
         <!-- Forms -->
         <service id="jfx_user_preferences.preferences.form"
-            class="Jfx\UserPreferencesBundle\Form\Type\PreferencesType">
+            class="Zapoyok\UserPreferencesBundle\Form\Type\PreferencesType">
             <tag name="form.type" alias="jfx_user_preferences_preferences_form" />
             <argument>%jfx_user_preferences.preferences%</argument>
         </service>

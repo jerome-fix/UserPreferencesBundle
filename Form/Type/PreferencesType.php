@@ -1,12 +1,12 @@
 <?php
 
-namespace Jfx\UserPreferencesBundle\Form\Type;
+namespace Zapoyok\UserPreferencesBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
-use Jfx\UserPreferencesBundle\Form\DataTransformer\EntityTransformer;
+use Zapoyok\UserPreferencesBundle\Form\DataTransformer\EntityTransformer;
 
 class PreferencesType extends AbstractType
 {
@@ -58,7 +58,7 @@ class PreferencesType extends AbstractType
 //    public function setDefaultOptions(OptionsResolverInterface $resolver)
 //    {
 //        $resolver->setDefaults(array(
-//            'data_class' => 'Jfx\UserPreferencesBundle\Entity\Preference,'
+//            'data_class' => 'Zapoyok\UserPreferencesBundle\Entity\Preference,'
 //        ));
 //    }
 

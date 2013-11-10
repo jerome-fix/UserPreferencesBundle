@@ -1,17 +1,17 @@
 <?php
 
-namespace Jfx\UserPreferencesBundle\Entity;
+namespace Zapoyok\UserPreferencesBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
-use Jfx\UserPreferencesBundle\Model\PreferenceInterface;
+use Zapoyok\UserPreferencesBundle\Model\PreferenceInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Preference
  *
  * @ORM\Table(name="jfx__user__preferences")
- * @ORM\Entity(repositoryClass="Jfx\UserPreferencesBundle\Entity\PreferenceRepository")
+ * @ORM\Entity(repositoryClass="Zapoyok\UserPreferencesBundle\Entity\PreferenceRepository")
  */
 class Preference implements PreferenceInterface
 {

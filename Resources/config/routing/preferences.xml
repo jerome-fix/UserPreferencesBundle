@@ -5,7 +5,7 @@
     xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
 
     <route id="jfx_user_preferences_edit" pattern="/edit-preferences">
-        <default key="_controller">JfxUserPreferencesBundle:Preferences:editPreferences</default>
+        <default key="_controller">ZapoyokUserPreferencesBundle:Preferences:editPreferences</default>
     </route>
 
 </routes>

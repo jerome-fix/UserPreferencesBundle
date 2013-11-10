@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Jfx\UserPreferencesBundle\Controller;
+namespace Zapoyok\UserPreferencesBundle\Controller;
 
 use Symfony\Component\DependencyInjection\ContainerAware;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -50,7 +50,7 @@ class PreferencesController extends ContainerAware
             $em->flush();
         }
 
-        return $this->container->get('templating')->renderResponse('JfxUserPreferencesBundle:Preferences:edit.html.twig',
+        return $this->container->get('templating')->renderResponse('ZapoyokUserPreferencesBundle:Preferences:edit.html.twig',
             array('form' => $form->createView())
         );
     }

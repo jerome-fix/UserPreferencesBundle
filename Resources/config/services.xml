@@ -6,7 +6,7 @@
 
     
     <parameters>
-        <parameter key="jfx_user_preferences.preference_manager.class">Jfx\UserPreferencesBundle\Model\PreferenceManager</parameter>
+        <parameter key="jfx_user_preferences.preference_manager.class">Zapoyok\UserPreferencesBundle\Model\PreferenceManager</parameter>
     </parameters>
 
     <services>
