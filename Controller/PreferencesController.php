@@ -41,7 +41,6 @@ class PreferencesController extends ContainerAware
                     ->get('form.factory')
                     ->create("zapoyok_user_preferences_preferences_form", $defaultData, array('em' => $em));
 
-//            var_dump($request); exit();
         $form->handleRequest($request);
         
         if ($form->isValid()) {

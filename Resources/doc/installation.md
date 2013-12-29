@@ -41,6 +41,14 @@ User.php
     }
     
     
+doctrine:
+  dbal:
+    …
+  orm:
+      …
+      resolve_target_entities: 
+        Zapoyok\UserPreferencesBundle\Model\UserInterface: Application\Sonata\UserBundle\Entity\User    
+    
     
 zapoyok_user_preferences:
   preferences:

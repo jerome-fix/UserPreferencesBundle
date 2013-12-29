@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping
+	xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                  http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+	<!-- <entity name="Zapoyok\UserPreferencesBundle\Entity\Preference" -->
+	<!-- repository-class="Zapoyok\UserPreferencesBundle\Entity\PreferenceRepository" 
+		table="zapoyok__user__preferences"> -->
+	<mapped-superclass name="Zapoyok\UserPreferencesBundle\Entity\Preference"
+		repository-class="Zapoyok\UserPreferencesBundle\Entity\PreferenceRepository"
+		table="zapoyok__user__preferences">
+		<id name="id" column="id" type="integer">
+			<generator strategy="AUTO" />
+		</id>
+
+		<field name="data" column="data" type="json_array">
+		</field>
+
+		<one-to-one field="user"
+			target-entity="Zapoyok\UserPreferencesBundle\Model\UserInterface"
+			inversed-by="preferences">
+			<join-column name="user_id" referenced-column-name="id" />
+		</one-to-one>
+
+	</mapped-superclass>
+
+</doctrine-mapping>

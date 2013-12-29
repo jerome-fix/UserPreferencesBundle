@@ -12,14 +12,9 @@
 namespace Zapoyok\UserPreferencesBundle\Model;
 
 use Symfony\Component\Validator\ExecutionContextInterface;
-use Symfony\Component\Security\Core\User\UserInterface;
-interface PreferenceInterface
-{
-    public function getId();
+use Symfony\Component\Security\Core\User\UserInterface as AbstractUserInterface;
 
-    public function getUser();
-    public function setUser(UserInterface $user);
-    public function setData($data);
-    public function getData();
+interface UserInterface extends AbstractUserInterface
+{
 
 }
